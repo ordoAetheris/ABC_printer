@@ -23,6 +23,11 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+        showStandardStreams = true
+        exceptionFormat "full"
+    }
 }
 application {
     mainClass = 'demo.ABCPrinterDemo'
